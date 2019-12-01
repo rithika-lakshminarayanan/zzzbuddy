@@ -97,6 +97,14 @@ def create(data):
     return from_sql(book)
 # [END create]
 
+# [START create]
+def createMessage(data):
+    message = Mook(**data)
+    db.session.add(message)
+    db.session.commit()
+    return from_sql(message)
+# [END create]
+
 
 # [START update]
 def update(data, id):
