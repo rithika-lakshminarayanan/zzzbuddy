@@ -60,7 +60,7 @@ def addMessage():
     if request.method == 'POST':
         data = request.form.to_dict(flat=True)
 
-        book = get_model().createMessage(data)
+        message = get_model().createMessage(data)
 
         return redirect(url_for('.view', id=message['message_id']))
 
